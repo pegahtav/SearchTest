@@ -1,0 +1,28 @@
+package com.auto.test.search;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.*;
+
+/**
+ * @author Pegah Tavakoli
+ *
+ */
+public class NavigateToGoogle {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+    WebDriver driver=new FirefoxDriver();
+	driver.get("https://encrypted.google.com/");
+	
+	try {
+		Thread.sleep(5);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	driver.quit();
+	}
+
+}

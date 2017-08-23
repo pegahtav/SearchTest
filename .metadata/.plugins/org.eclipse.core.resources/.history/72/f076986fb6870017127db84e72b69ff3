@@ -1,0 +1,32 @@
+package com.auto.test.search;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class SearchInChrome {
+
+	public SearchInChrome()
+	{
+		
+		try {
+			Thread.sleep(50);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		 WebElement element = driver.findElement(By.name("q"));
+	     element.sendKeys("Zoro app google play");
+	     element.submit();
+	     
+	     try {
+	 		Thread.sleep(50);
+	 	} catch (InterruptedException e) {
+	 		// TODO Auto-generated catch block
+	 		e.printStackTrace();
+	 	}
+	     
+	     driver.findElement(By.linkText("Zoro Taxi - Calling All Cabs - Android Apps on Google Play")).click();  
+	    
+	}
+}

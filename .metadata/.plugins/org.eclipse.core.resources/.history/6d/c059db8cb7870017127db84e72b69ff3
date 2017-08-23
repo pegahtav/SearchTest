@@ -1,0 +1,44 @@
+package com.auto.test.search;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.*;
+
+/**
+ * @author Pegah Tavakoli
+ *
+ */
+public class NavigateToGoogle {
+
+	/**
+	 * @param args
+	 * @throws InterruptedException 
+	 */
+	public static void main(String[] args) throws InterruptedException {
+		
+	//Create an instance of Chrome driver
+    System.setProperty("webdriver.chrome.driver",
+            "C:\\Users\\tavak\\Desktop\\searchZoro\\TestAutomation\\lib\\chromedriver.exe");
+    WebDriver driver=new ChromeDriver();
+    
+    //Launch the google
+	driver.get("https://encrypted.google.com/");
+	
+    //Wait for 50 sec
+		Thread.sleep(50);
+	
+	 WebElement element = driver.findElement(By.name("q"));
+     element.sendKeys("Zoro app google play");
+     element.submit();
+     
+     //Wait for 50 sec
+ 		Thread.sleep(50);
+
+     //Open Zoro in google Play
+     driver.findElement(By.linkText("Zoro Taxi - Calling All Cabs - Android Apps on Google Play")).click();  
+    
+	
+	//driver.quit();
+	}
+
+}

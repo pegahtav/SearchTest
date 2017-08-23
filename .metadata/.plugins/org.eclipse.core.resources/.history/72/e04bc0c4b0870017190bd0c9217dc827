@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.auto.test.search;
+
+/**
+ * @author Pegah Tavakoli
+ *
+ */
+public class NavigateToGoogle {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+//Webdriver driver = new ChromeDriver();
+
+	}
+
+}
